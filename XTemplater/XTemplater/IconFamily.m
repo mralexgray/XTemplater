@@ -899,7 +899,7 @@ enum {
 
 - (BOOL) setAsCustomIconForDirectory:(NSString*)path withCompatibility:(BOOL)compat
 {
-    NSFileManager *fm = [NSFileManager defaultManager];
+
     BOOL isDir;
     BOOL exists;
     NSString *iconrPath;

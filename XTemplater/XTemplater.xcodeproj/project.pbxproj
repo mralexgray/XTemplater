@@ -23,6 +23,9 @@
 		7B216DE217CEBD460071C70E /* IconFamily.m in Sources */ = {isa = PBXBuildFile; fileRef = 7B216DA217CEB4700071C70E /* IconFamily.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		7BC6901B17CECB1A00A260B2 /* iPhone.icns in Resources */ = {isa = PBXBuildFile; fileRef = 7BC6901A17CECB1A00A260B2 /* iPhone.icns */; };
 		7BC6901D17CECC4600A260B2 /* Mac.icns in Resources */ = {isa = PBXBuildFile; fileRef = 7BC6901C17CECC4600A260B2 /* Mac.icns */; };
+		7BC6902017CEDC9600A260B2 /* XAllowedType.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BC6901F17CEDC9600A260B2 /* XAllowedType.m */; };
+		7BC6902317CEF10E00A260B2 /* XAncestor.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BC6902217CEF10E00A260B2 /* XAncestor.m */; };
+		7BC6902617CEF55800A260B2 /* XFrameworks.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BC6902517CEF55800A260B2 /* XFrameworks.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +66,12 @@
 		7B216DDE17CEBD370071C70E /* Carbon.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Carbon.framework; path = System/Library/Frameworks/Carbon.framework; sourceTree = SDKROOT; };
 		7BC6901A17CECB1A00A260B2 /* iPhone.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = iPhone.icns; sourceTree = "<group>"; };
 		7BC6901C17CECC4600A260B2 /* Mac.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = Mac.icns; sourceTree = "<group>"; };
+		7BC6901E17CEDC9600A260B2 /* XAllowedType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XAllowedType.h; sourceTree = "<group>"; };
+		7BC6901F17CEDC9600A260B2 /* XAllowedType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XAllowedType.m; sourceTree = "<group>"; };
+		7BC6902117CEF10E00A260B2 /* XAncestor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XAncestor.h; sourceTree = "<group>"; };
+		7BC6902217CEF10E00A260B2 /* XAncestor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XAncestor.m; sourceTree = "<group>"; };
+		7BC6902417CEF55800A260B2 /* XFrameworks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFrameworks.h; sourceTree = "<group>"; };
+		7BC6902517CEF55800A260B2 /* XFrameworks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFrameworks.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,12 +140,18 @@
 		7B216DAF17CEBB190071C70E /* XTemplater */ = {
 			isa = PBXGroup;
 			children = (
+				7B216DC117CEBB1A0071C70E /* MainMenu.xib */,
+				7B216DBE17CEBB1A0071C70E /* XTemplate.xib */,
 				7B216D9E17CEADEC0071C70E /* XTemplate.h */,
 				7B216D9F17CEADEC0071C70E /* XTemplate.m */,
 				7B216D6617CEAC260071C70E /* XTemplater.h */,
 				7B216D6717CEAC260071C70E /* XTemplater.m */,
-				7B216DBE17CEBB1A0071C70E /* XTemplate.xib */,
-				7B216DC117CEBB1A0071C70E /* MainMenu.xib */,
+				7BC6902117CEF10E00A260B2 /* XAncestor.h */,
+				7BC6902217CEF10E00A260B2 /* XAncestor.m */,
+				7BC6902417CEF55800A260B2 /* XFrameworks.h */,
+				7BC6902517CEF55800A260B2 /* XFrameworks.m */,
+				7BC6901E17CEDC9600A260B2 /* XAllowedType.h */,
+				7BC6901F17CEDC9600A260B2 /* XAllowedType.m */,
 				7B216DC417CEBB1A0071C70E /* Images.xcassets */,
 				7BC6901A17CECB1A00A260B2 /* iPhone.icns */,
 				7BC6901C17CECC4600A260B2 /* Mac.icns */,
@@ -276,10 +291,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BC6902017CEDC9600A260B2 /* XAllowedType.m in Sources */,
 				7B216DE017CEBD460071C70E /* XTemplate.m in Sources */,
 				7B216DE117CEBD460071C70E /* XTemplater.m in Sources */,
+				7BC6902617CEF55800A260B2 /* XFrameworks.m in Sources */,
 				7B216DE217CEBD460071C70E /* IconFamily.m in Sources */,
 				7B216DB617CEBB190071C70E /* main.m in Sources */,
+				7BC6902317CEF10E00A260B2 /* XAncestor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,21 +430,34 @@
 		7B216DD917CEBB1B0071C70E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ANALYZER_OBJC_INCOMP_METHOD_TYPES = NO;
+				CLANG_ANALYZER_OBJC_INCOMP_METHOD_TYPES = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					/System/Library/Frameworks,
+					/Library/Frameworks,
+				);
+				GCC_C_LANGUAGE_STANDARD = c11;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "XTemplater/XTemplater-Prefix.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				GCC_WARN_UNDECLARED_SELECTOR = NO;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				INFOPLIST_FILE = "XTemplater/XTemplater-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-framework",
+					QuartzCore,
+					"-framework",
+					Cocoa,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx10.8;
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -434,17 +465,30 @@
 		7B216DDA17CEBB1B0071C70E /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CLANG_ANALYZER_OBJC_INCOMP_METHOD_TYPES = NO;
+				CLANG_ANALYZER_OBJC_INCOMP_METHOD_TYPES = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					/System/Library/Frameworks,
+					/Library/Frameworks,
+				);
+				GCC_C_LANGUAGE_STANDARD = c11;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "XTemplater/XTemplater-Prefix.pch";
-				GCC_WARN_UNDECLARED_SELECTOR = NO;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
 				INFOPLIST_FILE = "XTemplater/XTemplater-Info.plist";
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-framework",
+					QuartzCore,
+					"-framework",
+					Cocoa,
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx10.8;
+				SDKROOT = macosx;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

@@ -7,4 +7,9 @@
 #ifdef __OBJC__
 	#import <Cocoa/Cocoa.h>
 	#import <Carbon/Carbon.h>
+	#import <Foundation/Foundation.h>
+	#import <QuartzCore/QuartzCore.h>
+	
+	#define fm NSFileManager.defaultManager
+
 #endif
